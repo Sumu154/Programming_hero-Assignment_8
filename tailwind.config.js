@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        'purple': '#9538E2',
+        'blacktext': '#09080F',
+        'whitetext': '#F6F6F6',
+      },
     },
   },
   plugins: [
