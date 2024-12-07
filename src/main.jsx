@@ -10,14 +10,32 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { element } from 'prop-types';
 
 
-
+import Home from './Components/Pages/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+
+      },
+    //   {
+    //     path: "dashboard",
+    //     element: <Dashborad> </Dashborad>
+    //   },
+    //   {
+    //     path: 'statistic',
+    //     element: <Statistic></Statistic>
+    //   }
+    ]
   },
 ]);
 

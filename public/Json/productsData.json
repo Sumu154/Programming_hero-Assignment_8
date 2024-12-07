@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Smartphone X200",
     "image": "https://i.ibb.co.com/xYX8h72/download.jpg",
-    "category": "Smartphones",
+    "category": "Phones",
     "price": 499.99,
     "description": "The latest Smartphone X200 with a powerful processor and stunning display.",
     "specification": [
@@ -59,7 +59,7 @@
     "id": "4",
     "title": "Smartwatch Series 6",
     "image": "https://i.ibb.co.com/MNqySvP/download.jpg",
-    "category": "Wearables",
+    "category": "Watches",
     "price": 299.99,
     "description": "Smartwatch Series 6 with fitness tracking and heart rate monitoring.",
     "specification": [
@@ -76,8 +76,8 @@
   },
   {
     "product_id": "5",
-    "product_title": "Laptop UltraBook",
-    "product_image": "https://i.ibb.co.com/NFRwWtW/download.jpg",
+    "title": "Laptop UltraBook",
+    "image": "https://i.ibb.co.com/NFRwWtW/download.jpg",
     "category": "Laptops",
     "price": 999.99,
     "description": "Ultra-lightweight laptop with a long-lasting battery and sleek design.",
@@ -110,7 +110,7 @@
   {
     "id": "7",
     "title": "Wireless Earbuds Z1",
-    "image": "https://i.ibb.co.com/6nFHwhR/Ha5f19aaa8d1f4be880d3a692efd9fff6-J.jpg",
+    "image": "https://i.ibb.co.com/PGDpBwz/images.jpg",
     "category": "Earphones",
     "price": 79.99,
     "description": "Wireless Earbuds Z1 with superior sound quality and long battery life.",
@@ -126,7 +126,7 @@
   {
     "id": "8",
     "title": "Noise Cancelling Earbuds Pro",
-    "image": "https://i.ibb.co.com/6nFHwhR/Ha5f19aaa8d1f4be880d3a692efd9fff6-J.jpg",
+    "image": "https://i.ibb.co.com/52PfHFs/download.jpg",
     "category": "Earphones",
     "price": 149.99,
     "description": "Noise-cancelling earbuds for a quiet and immersive listening experience.",
@@ -172,90 +172,88 @@
     "availability": true,
     "rating": 4.9
   },
-  [
-    {
-      "product_id": "11",
-      "product_title": "Smartphone Alpha Max",
-      "product_image": "https://i.ibb.co.com/VLjpF5w/images.jpg",
-      "category": "Smartphones",
-      "price": 649.99,
-      "description": "Premium smartphone with cutting-edge features and stunning performance.",
-      "specification": [
-        "6.8-inch AMOLED display",
-        "256GB storage",
-        "12GB RAM",
-        "5000mAh battery",
-        "50MP + 12MP dual cameras"
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": "12",
-      "product_title": "Laptop Creator Pro",
-      "product_image": "https://i.ibb.co.com/FxZd18w/download.jpg",
-      "category": "Laptops",
-      "price": 1499.99,
-      "description": "Designed for creators with high-end specs and unmatched performance.",
-      "specification": [
-        "16-inch 4K display",
-        "1TB SSD",
-        "32GB RAM",
-        "Intel Core i9",
-        "NVIDIA RTX 3080"
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": "13",
-      "product_title": "Smartwatch Luxe Edition",
-      "product_image": "https://i.ibb.co.com/RTwYyHz/download.jpg",
-      "category": "Watches",
-      "price": 399.99,
-      "description": "Luxury smartwatch with advanced health monitoring and sleek design.",
-      "specification": [
-        "1.9-inch AMOLED display",
-        "ECG and SpO2 monitoring",
-        "GPS tracking",
-        "Water resistant up to 50m",
-        "Wireless charging"
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": "14",
-      "product_title": "Gaming Earphones GX100",
-      "product_image": "https://i.ibb.co.com/4ZDBfPV/images.jpg",
-      "category": "Earphones",
-      "price": 129.99,
-      "description": "Gaming earphones with ultra-low latency and immersive sound experience.",
-      "specification": [
-        "Bluetooth 5.2",
-        "Ultra-low latency",
-        "15-hour battery life",
-        "Detachable microphone"
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": "15",
-      "product_title": "Smartphone Lite S",
-      "product_image": "https://i.ibb.co.com/8szSYW6/download.jpg",
-      "category": "Smartphones",
-      "price": 349.99,
-      "description": "Affordable smartphone with impressive performance and a sleek design.",
-      "specification": [
-        "6.1-inch display",
-        "64GB storage",
-        "4GB RAM",
-        "3300mAh battery",
-        "13MP camera"
-      ],
-      "availability": true,
-      "rating": 4.2
-    }
-  ]  
+  {
+    "id": "11",
+    "title": "Smartphone Alpha Max",
+    "image": "https://i.ibb.co.com/dQvKtvj/images.jpg",
+    "category": "Phones",
+    "price": 649.99,
+    "description": "Premium smartphone with cutting-edge features and stunning performance.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "256GB storage",
+      "12GB RAM",
+      "5000mAh battery",
+      "50MP + 12MP dual cameras"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "id": "12",
+    "title": "Laptop Creator Pro",
+    "image": "https://i.ibb.co.com/FxZd18w/download.jpg",
+    "category": "Laptops",
+    "price": 1499.99,
+    "description": "Designed for creators with high-end specs and unmatched performance.",
+    "specification": [
+      "16-inch 4K display",
+      "1TB SSD",
+      "32GB RAM",
+      "Intel Core i9",
+      "NVIDIA RTX 3080"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "id": "13",
+    "title": "Smartwatch Luxe Edition",
+    "image": "https://i.ibb.co.com/RTwYyHz/download.jpg",
+    "category": "Watches",
+    "price": 399.99,
+    "description": "Luxury smartwatch with advanced health monitoring and sleek design.",
+    "specification": [
+      "1.9-inch AMOLED display",
+      "ECG and SpO2 monitoring",
+      "GPS tracking",
+      "Water resistant up to 50m",
+      "Wireless charging"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "id": "14",
+    "title": "Gaming Earphones GX100",
+    "image": "https://i.ibb.co.com/4ZDBfPV/images.jpg",
+    "category": "Earphones",
+    "price": 129.99,
+    "description": "Gaming earphones with ultra-low latency and immersive sound experience.",
+    "specification": [
+      "Bluetooth 5.2",
+      "Ultra-low latency",
+      "15-hour battery life",
+      "Detachable microphone"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "id": "15",
+    "title": "Smartphone Lite S",
+    "image": "https://i.ibb.co.com/8szSYW6/download.jpg",
+    "category": "Phones",
+    "price": 349.99,
+    "description": "Affordable smartphone with impressive performance and a sleek design.",
+    "specification": [
+      "6.1-inch display",
+      "64GB storage",
+      "4GB RAM",
+      "3300mAh battery",
+      "13MP camera"
+    ],
+    "availability": true,
+    "rating": 4.2
+  }  
 ]

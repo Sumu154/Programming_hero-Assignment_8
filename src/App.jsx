@@ -11,9 +11,11 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <div className="bg-whitetext">
+        <NavBar></NavBar>
+        <Outlet></Outlet>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
