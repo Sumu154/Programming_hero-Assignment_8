@@ -4,7 +4,7 @@ import Products from '../Others/Products';
 import Categories from '../Others/Categories';
 
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <HomeBanner></HomeBanner>
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

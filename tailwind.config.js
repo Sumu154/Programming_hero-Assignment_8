@@ -8,8 +8,11 @@ export default {
     extend: {
       colors: {
         'purple': '#9538E2',
+        'green': '#309C08',
+        'backgreen': 'rgba(48, 156, 8, 0.10)',
         'blacktext': '#09080F',
         'whitetext': '#F6F6F6',
+        'rating': '#F9C004',
       },
     },
   },

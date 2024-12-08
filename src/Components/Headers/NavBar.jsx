@@ -10,7 +10,7 @@ const NavBar = () => {
   const links = <>
                   <li> <NavLink cla to="/"> Home </NavLink> </li>
                   <li> <NavLink to="/"> Statistic </NavLink> </li>
-                  <li> <NavLink to="/"> Dashboard </NavLink> </li>
+                  <li> <NavLink to="/dashboard"> Dashboard </NavLink> </li>
                 </>
 
   return (
@@ -25,7 +25,7 @@ const NavBar = () => {
           <div className="h-9 w-9 rounded-full bg-white text-black flex justify-center items-center border-[1px] border-blacktext border-opacity-15"> <IoMdHeartEmpty /> </div>
           <div className="dropdown dropdown-end md:hidden">
             <div tabIndex={0} role="button" className="m-1 text-xl"> <RiMenu3Fill /> </div>
-            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-36  shadow">
+            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-36 text-blacktext text-opacity-70 shadow">
               {links}
             </ul>
           </div>

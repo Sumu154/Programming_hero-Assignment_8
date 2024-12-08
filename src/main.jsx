@@ -13,10 +13,9 @@ import {
 import { element } from 'prop-types';
 
 
-import Home from './Components/Pages/HomePage.jsx';
-import ProductDetails from './Components/Others/ProductDetails.jsx';
-
-
+import HomePage from './Components/Pages/HomePage.jsx';
+import DetailsPage from './Components/Pages/DetailsPage.jsx';
+import DashboardPage from './Components/Pages/DashboardPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,22 +24,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <HomePage></HomePage>
       },
       {
         path: "products/:id",
-        element: <ProductDetails></ProductDetails>,
-        loader: async () => {
-          const response = await fetch('/Json/productsData.json');
-          const data = await response.json();
-          return data;
+        element: <DetailsPage></DetailsPage>,
+        loader: async ({ params }) => {
+          const res = await fetch('/Json/productsData.json');
+          const data = await res.json();
+          const product = data.find(it => parseInt(it.id) === parseInt(params.id));
+          return product;
         },
 
       },
-    //   {
-    //     path: "dashboard",
-    //     element: <Dashborad> </Dashborad>
-    //   },
+      {
+        path: "dashboard",
+        element: <DashboardPage> </DashboardPage>
+      },
     //   {
     //     path: 'statistic',
     //     element: <Statistic></Statistic>

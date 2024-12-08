@@ -14,9 +14,7 @@
       "12MP camera"
     ],
     "availability": true,
-    "rating": 4.5,
-    "brand": "GadgetX",
-    "discount": 10
+    "rating": 3.5
   },
   {
     "id": "2",
@@ -33,9 +31,7 @@
       "Battery life: 12 hours"
     ],
     "availability": true,
-    "rating": 4.7,
-    "brand": "TechMate",
-    "discount": 5
+    "rating": 3.7
   },
   {
     "id": "3",
@@ -51,9 +47,7 @@
       "IPX4 water resistance"
     ],
     "availability": false,
-    "rating": 4.3,
-    "brand": "SoundTech",
-    "discount": 0
+    "rating": 4.3
   },
   {
     "id": "4",
@@ -70,14 +64,12 @@
       "Compatible with iOS and Android"
     ],
     "availability": true,
-    "rating": 4.8,
-    "brand": "FitTech",
-    "discount": 15
+    "rating": 4.8
   },
   {
-    "product_id": "5",
+    "id": "5",
     "title": "Laptop UltraBook",
-    "image": "https://i.ibb.co.com/NFRwWtW/download.jpg",
+    "image": "https://i.ibb.co.com/PCp41ny/download.jpg",
     "category": "Laptops",
     "price": 999.99,
     "description": "Ultra-lightweight laptop with a long-lasting battery and sleek design.",
@@ -89,7 +81,7 @@
       "Battery life: 15 hours"
     ],
     "availability": true,
-    "rating": 4.6
+    "rating": 2.6
   },
   {
     "id": "6",
@@ -105,7 +97,7 @@
       "Waterproof"
     ],
     "availability": true,
-    "rating": 4.4
+    "rating": 3.4
   },
   {
     "id": "7",
@@ -221,7 +213,7 @@
       "Wireless charging"
     ],
     "availability": true,
-    "rating": 4.7
+    "rating": 4.1
   },
   {
     "id": "14",
