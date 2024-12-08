@@ -13,7 +13,7 @@ const ProductDetails = ({ product }) => {
 
   const handleAddToCart = () => {
     console.log(product);
-    // cart.pusproducth();
+    setCart([...cart, product]);
   }
 
 
