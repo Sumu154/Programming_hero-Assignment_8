@@ -12,6 +12,9 @@ import {
 } from "react-router-dom";
 import { element } from 'prop-types';
 
+// contexts
+import CartProvider from './Contexts/CartContext.jsx';
+
 
 import HomePage from './Components/Pages/HomePage.jsx';
 import DetailsPage from './Components/Pages/DetailsPage.jsx';
@@ -53,7 +56,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-    <ToastContainer />
+    <CartProvider>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </CartProvider>
   </StrictMode>,
 )

@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import RatingStars from './RatingStars';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoMdHeartEmpty } from "react-icons/io";
 
-
+import { CartContext } from '../../Contexts/CartContext';
 
 const ProductDetails = ({ product }) => {
   const {id, title, image, price, description, specification, availability, rating} = product;
-  
+
+  const { cart, setCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    console.log(product);
+    // cart.pusproducth();
+  }
+
 
   return (
     <div className="max-w-[80%] mx-auto bg-white p-4 rounded-2xl -mt-24">
@@ -39,7 +46,7 @@ const ProductDetails = ({ product }) => {
           </div>
 
           <div className="flex gap-4 items-center my-3">
-            <button className="bg-purple text-white font-bold flex items-center gap-2 px-3 py-1 rounded-2xl"> Add to Card <AiOutlineShoppingCart /> </button>
+            <button onClick={handleAddToCart} className="bg-purple text-white font-bold flex items-center gap-2 px-3 py-1 rounded-2xl"> Add to Card <AiOutlineShoppingCart /> </button>
             <div className="h-9 w-9 rounded-full bg-white text-black flex justify-center items-center border-[1px] border-blacktext border-opacity-15"> <IoMdHeartEmpty /> </div>
           </div>
         </div>
