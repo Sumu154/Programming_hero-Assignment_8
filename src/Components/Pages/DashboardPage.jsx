@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Statistic = () => {
+const DashboardPage = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Statistic = () => {
   );
 };
 
-export default Statistic;
+export default DashboardPage;

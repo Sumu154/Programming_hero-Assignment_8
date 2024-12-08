@@ -13,7 +13,10 @@ import {
 import { element } from 'prop-types';
 
 
-import Home from './Components/Pages/Home.jsx';
+import Home from './Components/Pages/HomePage.jsx';
+import ProductDetails from './Components/Others/ProductDetails.jsx';
+
+
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,13 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: "products/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: async () => {
+          const response = await fetch('/Json/productsData.json');
+          const data = await response.json();
+          return data;
+        },
 
       },
     //   {

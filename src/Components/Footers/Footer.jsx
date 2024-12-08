@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="text-blacktext py-16 mt-8 max-w-[680px] mx-auto">
         <h2 className="text-3xl font-bold text-center"> Gadget Heaven </h2>
         <p className="opacity-70 text-center"> Leading the way in cutting-edge technology and innovation. </p>
-        <div className="flex justify-between pt-10">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between pt-10">
           <div className="text-center">
             <h5 className="text-lg font-bold"> Services </h5>
             <ul className="opacity-60">
