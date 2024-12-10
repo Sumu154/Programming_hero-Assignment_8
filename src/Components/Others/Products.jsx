@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
 
-const Products = () => {
+const Products = ( {selectedCategory} ) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() =>{
     const fetchProducts = async () => {
       const res = await fetch('Json/productsData.json');
       const data = await res.json();
-      setProducts(data);
+
+      const filterProducts = selectedCategory==='All Products' ? data : 
+                             data.filter((it) => it.category === selectedCategory);
+
+      setProducts(filterProducts);
     }
     fetchProducts();
-  }, [])
+  }, [selectedCategory])
 
 
   return (

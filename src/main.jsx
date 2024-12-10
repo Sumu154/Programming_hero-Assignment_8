@@ -14,11 +14,21 @@ import { element } from 'prop-types';
 
 // contexts
 import CartProvider from './Contexts/CartContext.jsx';
+import WishlistProvider from './Contexts/WishlistContext.jsx';
+import TotalcostProvider from './Contexts/TotalcostContext.jsx';
+import CommentProvider from './Contexts/CommentContext.jsx';
 
 
+
+// pages
 import HomePage from './Components/Pages/HomePage.jsx';
 import DetailsPage from './Components/Pages/DetailsPage.jsx';
 import DashboardPage from './Components/Pages/DashboardPage.jsx';
+import CommentPage from './Components/Pages/CommentPage.jsx';
+import ErrorPage from './Components/Pages/ErrorPage.jsx';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -27,7 +37,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage></HomePage>
+        element: <HomePage></HomePage>,
+        children: [
+
+        ]
       },
       {
         path: "products/:id",
@@ -44,6 +57,10 @@ const router = createBrowserRouter([
         path: "dashboard",
         element: <DashboardPage> </DashboardPage>
       },
+      {
+        path: "comment",
+        element: <CommentPage></CommentPage>
+      }
     //   {
     //     path: 'statistic',
     //     element: <Statistic></Statistic>
@@ -56,9 +73,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CartProvider>
+    <CartProvider> <WishlistProvider> <TotalcostProvider> <CommentProvider>
       <RouterProvider router={router} />
       <ToastContainer />
-    </CartProvider>
+      </CommentProvider> </TotalcostProvider> </WishlistProvider> </CartProvider>
   </StrictMode>,
 )

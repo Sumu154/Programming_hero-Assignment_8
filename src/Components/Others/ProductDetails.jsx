@@ -1,19 +1,70 @@
-import React, { useContext } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
 import RatingStars from './RatingStars';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { toast } from 'react-toastify';
 
 import { CartContext } from '../../Contexts/CartContext';
+import { WishlistContext } from '../../Contexts/WishlistContext';
+import { TotalcostContext } from '../../Contexts/TotalcostContext';
+import { CommentContext } from '../../Contexts/CommentContext';
+
 
 const ProductDetails = ({ product }) => {
   const {id, title, image, price, description, specification, availability, rating} = product;
 
   const { cart, setCart } = useContext(CartContext);
+  const { wishlist, setWishlist } = useContext(WishlistContext);
+  const { totalcost, setTotalcost } = useContext(TotalcostContext)
+  const { comments, setComments } = useContext(CommentContext);
 
+  // new jei comment add hbe oita manage er jonne
+  const [ newComment, setNewComment ] = useState('');
+
+
+
+  // functions
   const handleAddToCart = () => {
     console.log(product);
+    setTotalcost(totalcost+price);
     setCart([...cart, product]);
+
+    toast.success('Product added successfully!', {
+      position: "top-center",
+      theme: "dark",
+    });
+  }
+
+  const handleAddToWishlist = () => {
+    // console.log(product);
+    if(wishlist.some((it) => it.id==id)){
+      toast.error(`Wish already added!`, {
+        position: "top-center",
+        theme: "dark",
+      });
+      return;
+    }
+    setWishlist([...wishlist, product]);
+
+    toast.success('Wish added successfully!', {
+      position: "top-center",
+      theme: "dark",
+    });
+  }
+
+  const handleAddComment = () => {
+    if(newComment.trim() === ''){
+      return;
+    }
+    // console.log(newComment);
+    const commentObject = {
+      prodId: id,
+      prodTitle: title,
+      commentText: newComment,
+    }
+
+    setComments([...comments, commentObject]);
+    setNewComment('');  // clear the variable and input feild
   }
 
 
@@ -47,9 +98,16 @@ const ProductDetails = ({ product }) => {
 
           <div className="flex gap-4 items-center my-3">
             <button onClick={handleAddToCart} className="bg-purple text-white font-bold flex items-center gap-2 px-3 py-1 rounded-2xl"> Add to Card <AiOutlineShoppingCart /> </button>
-            <div className="h-9 w-9 rounded-full bg-white text-black flex justify-center items-center border-[1px] border-blacktext border-opacity-15"> <IoMdHeartEmpty /> </div>
+            <div onClick={handleAddToWishlist} className="h-9 w-9 rounded-full bg-white text-black flex justify-center items-center border-[1px] border-blacktext border-opacity-15"> <IoMdHeartEmpty /> </div>
           </div>
         </div>
+      </div>
+
+      {/* comment */}
+      <div className="w-full md:max-w-[80%]">
+        <p className="ml-auto underline text-purple font-semibold text-lg mb-4"> Add a comment? </p>
+        <textarea value={newComment} onChange={(e)=> setNewComment(e.target.value)} className="bg-whitetext w-full h-[100px] rounded-lg" name="" id="" ></textarea>
+        <div onClick={handleAddComment} className="flex justify-end">  <button className="bg-purple text-white font-semibold px-3 py-1 rounded-2xl my-4"> Submit Comment </button>  </div>
       </div>
     </div>
   );
